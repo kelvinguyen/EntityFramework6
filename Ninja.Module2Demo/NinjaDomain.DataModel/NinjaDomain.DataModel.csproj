@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataHelpers.cs" />
     <Compile Include="Migrations\201610040646571_Initial Migration.cs" />
     <Compile Include="Migrations\201610040646571_Initial Migration.Designer.cs">
       <DependentUpon>201610040646571_Initial Migration.cs</DependentUpon>
