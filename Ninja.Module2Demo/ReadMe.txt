@@ -10,3 +10,8 @@ Step 3 : Data Migration : update database schema as the model change
 Step 4 : Change model logic and need to update database
 			- PM> add-migration NameOfMigration
 			- PM> update-database -verbose
+
+Step 5 : Create Console Application 
+			- add NinjaDomain.Classes and NinjaDomain.DataModel as reference
+			- Install entity framework using PM> install-package EntityFramework
+			
