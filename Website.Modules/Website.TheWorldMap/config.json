@@ -1,0 +1,8 @@
+﻿{
+  "MailSetting": {
+    "ToAddress": "kelvinguyen@hotmail.com"
+  },
+  "ConnectionStrings": {
+    "WorldContextConnection": "Server=(localDB)\\MSSQLLocalDB;  Database= TheWorldDB;  Trusted_Connection=true;  MultipleActiveResultSets=true;"
+  }
+}
