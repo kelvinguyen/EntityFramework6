@@ -7,7 +7,7 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>75eba321-bbb5-4385-9aed-b90102464c9d</ProjectGuid>
+    <ProjectGuid>b6b74570-869f-4171-93aa-d9f3dcc381a6</ProjectGuid>
     <RootNamespace>GitHub.Models</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>

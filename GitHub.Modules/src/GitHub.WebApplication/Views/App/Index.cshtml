@@ -1,0 +1,94 @@
+﻿@model GitHub.WebApplication.ViewModels.PersonViewModel
+@{
+    ViewBag.Title = "Search Page";
+}
+@section scripts{
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <link href="~/lib/bootswatch/cerulean/bootstrap.min.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div id="search" class="form-group-lg container-fluid col-md-offset-4">
+        <label asp-for="Name" class="label label-primary">Name Search</label>
+        <input asp-for="Name" class="form-group-lg" />
+    </div>
+</div>
+<div class="row">
+    <div id="person" class="container-fluid">
+        <table class="table table-bordered ">
+            <thead >
+                <tr class="col-sm-offset-2">
+                    <th class="col-sm-2">Picture</th>
+                    <th class="col-sm-2">Name</th>
+                    <th class="col-sm-4">Address</th>
+                    <th class="col-sm-4">Interests</th>
+                </tr>
+            </thead>
+            <tbody class="text-info text-center">
+                @*<tr>
+                        <td>
+                            <img arc=@Model.Image />
+                        </td>
+                        <td>@Model.Name</td>
+                        <td>
+                            <ul>
+                                @foreach (var item in Model.Address)
+                                {
+                                    <li>item</li>
+                                }
+                            </ul>
+
+                        </td>
+                        <td>
+                            <ol>
+                                @foreach (var item in Model.Interests)
+                                {
+                                    <li>item</li>
+                                }
+                            </ol>
+                        </td>
+                    </tr>*@
+                <tr>
+                    <td>
+                        my image
+                    </td>
+                    <td>kelvin nguyen</td>
+                    <td>
+                        <ul class="nav text-primary text-center">
+                            <li>fjklfjadjfalflasdlfkl;askfkasdll;adkfl</li>
+                            <li>fjklfjadjfalflasdlfkl;askfkasdll;adkfl</li>
+                        </ul>
+
+                    </td>
+                    <td>
+                        <ol class="nav text-primary text-center">
+                            <li>fjklfjadjfalflasdlfkl;askfkasdll;adkfl</li>
+                            <li>fjklfjadjfalflasdlfkl;askfkasdll;adkfl</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        my image
+                    </td>
+                    <td>kelvin nguyen</td>
+                    <td>
+                        <ul class="nav text-primary text-center">
+                            <li>fjklfjadjfalflasdlfkl;askfkasdll;adkfl</li>
+                            <li>fjklfjadjfalflasdlfkl;askfkasdll;adkfl</li>
+                        </ul>
+
+                    </td>
+                    <td>
+                        <ol class="nav text-primary text-center">
+                            <li>fjklfjadjfalflasdlfkl;askfkasdll;adkfl</li>
+                            <li>fjklfjadjfalflasdlfkl;askfkasdll;adkfl</li>
+                        </ol>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
