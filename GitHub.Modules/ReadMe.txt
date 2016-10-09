@@ -15,23 +15,26 @@ User stories
 	- As address, I will have City
 	- As address, I will have State
 	- As Address, I will have ZipCode
+	- As Address, I will have a person
 
 	PersonInterest
 	- As personInterset, I will have Id
 	- As personInterest, I will have InterestContent
+	- As PersonInterset, I will have a person
 
 	PersonImage
 	- As personImage, I will have Id
 	- As personImage, I will have image
+	- As personImage, I will have person
 
 
 
+Github Architecture layout
+	- GitHub.Models.dll : this will contain all model classes
+	- GitHub.Context.dll : This will contain contextdb
+	- GitHub.Repository.dll : this will contain repo interface and repo
+	- GitHub.WebApplication : the main application
+		
 
 
-
-	The application accepts search input in a text box and then displays in a 
-	pleasing style a list of people where any part of their first or last name matches 
-	what was typed in the search box (displaying at least name, address, age, interests, 
-	and a picture). 
-Solution should either seed data or provide a way to enter new users or both
-Simulate search being slow and have the UI gracefully handle the delay
+	
