@@ -22,6 +22,7 @@
             $scope.newSearch = {};
 
             //retrieve data
+
             
             $http.get("/api/search").then(successFunc, failFunc);
                

@@ -19,13 +19,6 @@ namespace Catalyst.Web
     {
         private IHostingEnvironment _env;
 
-        /* -- HOW TO USE CONFIG FILE 
-         * Include IConfigurationRoot config : as an argument to your method. 
-         * Then use _config = config : NOTE * Dependency Injection.
-         * --
-         * Use: 
-         * _config["API:base"] : This will return http://api.randomuser.me
-         */
         private IConfigurationRoot _config;
 
 
