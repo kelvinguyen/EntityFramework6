@@ -58,9 +58,9 @@
       <Project>{DD7CDE87-B933-4138-A690-87704D679EE2}</Project>
       <Name>NameSearch.Classes</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NameSearch.Entity\NameSearch.Entity.csproj">
-      <Project>{AF80A347-E35C-4E0D-B98D-E12E236A3563}</Project>
-      <Name>NameSearch.Entity</Name>
+    <ProjectReference Include="..\NameSearch.DataContext\NameSearch.DataContext.csproj">
+      <Project>{BE2E872B-FB89-418C-BC31-8465C221430E}</Project>
+      <Name>NameSearch.DataContext</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

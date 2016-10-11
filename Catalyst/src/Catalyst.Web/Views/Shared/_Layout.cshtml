@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>People Search</title>
+    <link rel="stylesheet" href="~/lib/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="~/lib/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="~/lib/bootswatch/yeti/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/dist/styles.css" />
+    <script src="~/lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-app="app-search">
+    <div class="row">
+        <section id="wrapper" class="col-md-6">
+            <nav class="navbar navbar-header">
+                <div class="container-fluid">
+                    <a asp-controller="App" asp-action="Index" class="navbar-brand">Search For People</a>
+                </div>
+            </nav>
+            <section id="main" class="container-fluid">
+                @RenderBody()
+            </section>
+            <footer id="footer" class="container-fluid">
+                <div class="navbar navbar-toggle navbar-fixed-bottom">
+                    <h4 class="text-center text-info">&copy; 2016 Kelvin Nguyen</h4>
+                </div>
+            </footer>
+        </section>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    @RenderSection("scripts", false)
+    <script type="text/javascript" src="~/lib/requirejs/require.js" data-main="app_config"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Main Page";
+}
+@section scripts{
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/js/app-search.js"></script>
+    <script src="~/js/SearchController.js"></script>
+}
+
+<div ng-controller="searchController">  
+    <header class="col-md-6 col-md-offset-3 ">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input class="search" ng-model="newSearch.username" placeholder="Search People" />
+        <input type="submit" value="search" class="btn btn-success btn-sm" ng-click="kelvin()" />
+    </header>
+    <div>
+        <ul class="list-group col-xs-12" >
+            <li class="list-group-item" ng-repeat="person in people">
+                <article class="row">
+                    <header class="col-xs-12 col-md-3">
+                        <figure>
+                            <div class="image_placeholder">
+                                <img class="picture_large" src={{person.icon.imageUrl}} />
+                            </div>
+                            <figcaption>
+                                <b>{{person.fullName}}</b>
+                            </figcaption>
+                        </figure>
+                    </header>
+                    <section class="col-xs-12 col-md-9">
+                        <div class="row">
+                            <address class="col-xs-12">
+                                {{person.address.street}}
+                                <br />
+                                {{person.address.city}} {{person.address.state}} , {{person.address.postalCode}}
+                            </address>
+                        </div>
+                        <ul class="row">
+
+                            <li class="col-xs-12 col-sm-4">
+                                <i class="fa fa-birthday-cake" aria-hidden="true"> Age</i>
+                                <div>{{person.age}}</div>
+                            </li>
+                        </ul>
+                    </section>
+                    <dl class="col-xs-12">
+                        <dt>Interests : </dt>
+                        <dd ng-repeat ="interest in person.interests">
+                            {{interest.interest}}
+                        </dd>
+                    </dl>
+
+                </article>
+            </li>
+        </ul>
+    </div>
+</div>

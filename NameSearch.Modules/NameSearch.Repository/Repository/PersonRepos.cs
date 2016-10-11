@@ -4,22 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NameSearch.Classes.Models;
-using NameSearch.Entity.PersonContext;
+using NameSearch.DataContext.PersonContext;
 
 namespace NameSearch.Repository.Repository
 {
-    class PersonRepos : IPersonRepos
+    public class PersonRepos : IPersonRepos
     {
-        private PersonContext _context;
-
-        public PersonRepos(PersonContext context)
-        {
-            _context = context;
-        }
+        
         public List<Person> GetAllPeople()
         {
-            
-            return _context.People.ToList();
+            using (var context = new PersonContext())
+            {
+                return context.People.ToList();
+            }
+               
            
         }
     }

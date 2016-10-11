@@ -15,5 +15,7 @@ namespace NameSearch.Classes.Models
         public string ImgUrl { get; set; }
         public List<Interest> Interests { get; set; }
 
+        public int Age { get; set; }
+
     }
 }
