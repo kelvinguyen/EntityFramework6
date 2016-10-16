@@ -1,0 +1,45 @@
+{
+  "ProjectName": "EliteScheduleApp.Mobile",
+  "ProjectGuid": "bc861bec-af06-4dbf-b043-4e4a7a2045dc",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.EliteScheduleAppMobile",
+  "DisplayName": "EliteScheduleApp.Mobile",
+  "Author": "",
+  "Description": "EliteScheduleApp.Mobile",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{c73be0cd-c3c8-456d-8ce0-f0a837743b52}",
+  "WP8ProductID": "{64bb894d-d271-4807-8234-f0230db5f4b8}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.EliteScheduleAppMobile",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
