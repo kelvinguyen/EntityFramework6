@@ -21,6 +21,24 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\game\game.html" />
+    <Content Include="app\home\home.html" />
+    <Content Include="app\home\leagues.html" />
+    <Content Include="app\home\myteams.html" />
+    <Content Include="app\layout\menu-layout.html" />
+    <Content Include="app\locations\locations.html" />
+    <Content Include="app\rules\rules.html" />
+    <Content Include="app\standing\standing.html" />
+    <Content Include="app\teams\team-detail-ctrl.js" />
+    <Content Include="app\teams\teamDetails.html" />
+    <Content Include="app\teams\teams.html" />
+    <Content Include="js\app.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\controllers.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="lib\ionic\css\ionic.css">
       <SubType>Content</SubType>
     </Content>
@@ -317,6 +335,13 @@
     <Content Include="js\index.js" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\home\" />
+    <Folder Include="app\layout\" />
+    <Folder Include="app\game\" />
+    <Folder Include="app\locations\" />
+    <Folder Include="app\rules\" />
+    <Folder Include="app\standing\" />
+    <Folder Include="app\teams\" />
     <Folder Include="App_Resources\" />
     <Folder Include="App_Resources\Android\" />
     <Folder Include="App_Resources\Android\drawable-hdpi\" />
@@ -348,6 +373,7 @@
     <Folder Include="lib\ionic\js\angular\" />
     <Folder Include="lib\ionic\scss\" />
     <Folder Include="lib\ionic\scss\ionicons\" />
+    <Folder Include="app\" />
     <Folder Include="Plugins\" />
     <Folder Include="templates\" />
   </ItemGroup>
