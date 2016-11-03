@@ -39,5 +39,22 @@ namespace MVC4.Web.Controllers
         {
             return View();
         }
+
+        /*
+         * Action Filter : implement logic that execute before and after a controller action execute
+         *  + OutputCache : cache ouput of this action to the cache memory for a set amount of time
+         *  + HandleError : handle error raise when action executes
+         *  + Authorize : restrict access to a particular user or role 
+         *  + ValidateInput : turn off the request validation and allow dangerous input
+         *  + ValidateAntiForgeryToken : help to prevent cross site request forgeries
+         */
+         [OutputCache(Duration = 10)]
+         [HandleError] // redirect to mvc error page
+         [Authorize] // allow only login user
+         [Authorize(Roles = "admin")]
+        public ActionResult ActionFilterSample()
+        {
+            return Json(new List<string>(), JsonRequestBehavior.AllowGet);
+        }
     }
 }
