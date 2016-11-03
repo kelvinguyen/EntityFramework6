@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MVC4.Web.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>The Latest Review</h2>
+<h1>@VirtualPath</h1>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@foreach (var item in Model) {
+   <div>
+       <h4>@item.Name</h4>
+       <div>@item.City , @item.Country</div>
+       <br/>
+
+   </div>
+}
+
