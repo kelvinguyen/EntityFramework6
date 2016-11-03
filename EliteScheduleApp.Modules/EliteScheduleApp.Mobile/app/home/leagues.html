@@ -1,5 +1,13 @@
-<ion-view>
+<ion-view view-title="League view" ng-controller="leagueCtrl as vm">
     <ion-content class="has-header">
-        <h1>Leagues</h1>
+        <div class="list">
+            <a class="item item-icon-right" 
+               ng-repeat="league in vm.league"
+               ng-click="vm.selectLeague(league.id)">
+                {{league.userId}} - {{league.id}}
+                <!--icon-accessory : keep it to the right side-->
+                <i class="icon ion-chevron-right icon-accessory"> </i>
+            </a>
+        </div>
     </ion-content>
 </ion-view>

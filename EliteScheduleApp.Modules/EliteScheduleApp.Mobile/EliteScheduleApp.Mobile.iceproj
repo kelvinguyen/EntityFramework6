@@ -24,15 +24,461 @@
     <Content Include="app\app.js" />
     <Content Include="app\game\game.html" />
     <Content Include="app\home\home.html" />
+    <Content Include="app\home\league-Ctrl.js" />
     <Content Include="app\home\leagues.html" />
     <Content Include="app\home\myteams.html" />
     <Content Include="app\layout\menu-layout.html" />
+    <Content Include="app\locations\location-Ctrl.js" />
     <Content Include="app\locations\locations.html" />
     <Content Include="app\rules\rules.html" />
+    <Content Include="app\services\eliteApi.js" />
+    <Content Include="app\standing\standing-ctrl.js" />
     <Content Include="app\standing\standing.html" />
     <Content Include="app\teams\team-detail-ctrl.js" />
     <Content Include="app\teams\teamDetails.html" />
+    <Content Include="app\teams\teams-ctrl.js" />
     <Content Include="app\teams\teams.html" />
+    <Content Include="bower.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\.bower.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\.editorconfig">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\.gitattributes">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\.jscsrc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\.markdown-doctest-setup.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\.travis.yml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\CHANGELOG">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\dist\lodash.core.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\dist\lodash.core.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\dist\lodash.fp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\dist\lodash.fp.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\dist\lodash.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\dist\lodash.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\dist\mapping.fp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\doc\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\fp\placeholder.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\fp\_baseConvert.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\fp\_convertBrowser.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\fp\_mapping.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\common\file.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\common\mapping.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\common\minify.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\common\uglify.options.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\common\util.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\build-dist.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\build-doc.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\build-modules.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\doc\wiki.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\modules\alias.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\modules\category.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\modules\convert.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\modules\fp.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\modules\module.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\modules\thru.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\modules\_falseOptions.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\fp\template\modules\_util.jst">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\main\build-dist.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\main\build-doc.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\main\build-modules.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lib\main\build-site.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\lodash.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\perf\asset\perf-ui.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\perf\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\perf\perf.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\asset\test-ui.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\asset\worker.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\backbone.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\fp.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\remove.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\saucelabs.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\test-fp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\test\underscore.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\backbone.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\collection.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\events.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\model.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\noconflict.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\router.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\setup\dom-setup.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\setup\environment.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\sync.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\backbone\test\view.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\license.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\blank.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\buttonBg.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\buttonBgHover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\debugger.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\detach.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\detachHover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\disable.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\disable.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\disableHover.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\disableHover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\down.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\downActive.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\downHover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\errorIcon-sm.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\errorIcon.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\errorIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\firebug-1.3a2.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\firebug.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\firebug.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\firebug.IE6.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\firebug.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\group.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\html.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\infoIcon.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\infoIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\loading_16.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\min.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\minHover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\off.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\offHover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\pixel_transparent.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\roundCorner.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\search.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\shadow.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\shadow2.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\shadowAlpha.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\sprite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabHoverLeft.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabHoverMid.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabHoverRight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabLeft.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabMenuCheckbox.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabMenuPin.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabMenuRadio.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabMenuTarget.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabMenuTargetHover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabMid.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tabRight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\textEditorBorders.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\textEditorBorders.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\textEditorCorners.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\textEditorCorners.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\titlebarMid.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\toolbarMid.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tree_close.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\tree_open.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\twistyClosed.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\twistyOpen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\up.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\upActive.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\upHover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\warningIcon.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\skin\xp\warningIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\firebug-lite\src\firebug-lite-debug.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\json-js\json2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\test\arrays.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\test\chaining.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\test\collections.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\test\cross-document.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\test\functions.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\test\objects.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\test\utility.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\underscore-min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\lodash\vendor\underscore\underscore.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="js\app.js">
       <SubType>Content</SubType>
     </Content>
@@ -339,6 +785,7 @@
     <Folder Include="app\layout\" />
     <Folder Include="app\game\" />
     <Folder Include="app\locations\" />
+    <Folder Include="app\services\" />
     <Folder Include="app\rules\" />
     <Folder Include="app\standing\" />
     <Folder Include="app\teams\" />
@@ -361,6 +808,34 @@
     <Folder Include="App_Resources\WP8\Assets\" />
     <Folder Include="App_Resources\WP8\Tiles\" />
     <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
+    <Folder Include="bower_components\" />
+    <Folder Include="bower_components\lodash\" />
+    <Folder Include="bower_components\lodash\.github\" />
+    <Folder Include="bower_components\lodash\dist\" />
+    <Folder Include="bower_components\lodash\doc\" />
+    <Folder Include="bower_components\lodash\fp\" />
+    <Folder Include="bower_components\lodash\lib\" />
+    <Folder Include="bower_components\lodash\lib\common\" />
+    <Folder Include="bower_components\lodash\lib\fp\" />
+    <Folder Include="bower_components\lodash\lib\fp\template\" />
+    <Folder Include="bower_components\lodash\lib\fp\template\doc\" />
+    <Folder Include="bower_components\lodash\lib\fp\template\modules\" />
+    <Folder Include="bower_components\lodash\lib\main\" />
+    <Folder Include="bower_components\lodash\perf\" />
+    <Folder Include="bower_components\lodash\perf\asset\" />
+    <Folder Include="bower_components\lodash\test\" />
+    <Folder Include="bower_components\lodash\test\asset\" />
+    <Folder Include="bower_components\lodash\vendor\" />
+    <Folder Include="bower_components\lodash\vendor\backbone\" />
+    <Folder Include="bower_components\lodash\vendor\backbone\test\" />
+    <Folder Include="bower_components\lodash\vendor\backbone\test\setup\" />
+    <Folder Include="bower_components\lodash\vendor\firebug-lite\" />
+    <Folder Include="bower_components\lodash\vendor\firebug-lite\skin\" />
+    <Folder Include="bower_components\lodash\vendor\firebug-lite\skin\xp\" />
+    <Folder Include="bower_components\lodash\vendor\firebug-lite\src\" />
+    <Folder Include="bower_components\lodash\vendor\json-js\" />
+    <Folder Include="bower_components\lodash\vendor\underscore\" />
+    <Folder Include="bower_components\lodash\vendor\underscore\test\" />
     <Folder Include="css\" />
     <Folder Include="img\" />
     <Folder Include="js\" />

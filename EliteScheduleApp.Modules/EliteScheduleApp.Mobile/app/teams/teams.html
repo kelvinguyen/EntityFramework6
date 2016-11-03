@@ -1,6 +1,27 @@
-<ion-view>
+<ion-view ng-controller="teamCtrl as vm">
     <ion-content class="has-header">
-        <h1>Teams page</h1>
-        <a href="#/app/teams/21" class="button button-positive">GoTo Team</a>
+        <div class="list">
+            <div>
+                {{vm.teams}}
+                <!--
+                   <div class="item item-divider item-energized"> </div>    
+                
+                   <a class="item item-icon-right"
+                   ng-repeat="team in division"
+                   ui-sref="app.teams.{{team.teamID}}">
+                    {{team.team}}
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                   </a>
+                -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-divider item-energized">Home</div>
+            <div class="item">Team Name</div>
+            <div class="item item-divider">Score</div>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
     </ion-content>
 </ion-view>

@@ -1,0 +1,21 @@
+{
+  "name": "EliteSchedule",
+  "homepage": "https://github.com/kelvinguyen/EntityFramework6",
+  "authors": [
+    "kelvin nguyen <kelvinguyen@hotmail.com>"
+  ],
+  "description": "List of the schedule",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.16.4"
+  }
+}
