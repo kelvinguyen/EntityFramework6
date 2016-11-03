@@ -13,6 +13,9 @@ namespace MVC4.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // cousine/{name}
+            routes.MapRoute("cousine","cousine/{name}",new { controller="Cousine",action="Search",name=UrlParameter.Optional});
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
