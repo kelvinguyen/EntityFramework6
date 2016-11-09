@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8f2d8e26-92e4-4c3b-a5a6-dcf6eb461dc9" name="UMLUseCaseDiagram1" linkedPackageId="8468ddf0-3a1d-4dd5-9ef4-8b3638918b90" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="13fc0394-6ad6-468e-b7aa-6f8c634e9d14">
+      <profileInstance Id="60234406-a55c-4b0c-be42-8f2df90fa567" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e9e6c1fe-f1f6-4348-90c8-97496c208c5f">
+      <profileInstance Id="d57f86a2-8c4f-460b-bce8-1ef4f1dd1f14" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="47d1aeab-8c13-4984-99a5-ea9b7b8bcf56" name="Server" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="57934a8c-ac67-4e66-9990-2335ab911db3" />
+        <targetEnds>
+          <association Id="e311bd98-bf36-4d40-87a8-967eca05f9de" isDerived="false" sourceEndRoleName="Server" targetEndRoleName="Serve the table" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2e9cd58c-972f-4607-96c3-b415f913d7c1" LastKnownName="Serve the table" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="faf521d6-86bd-45f7-a7be-6c00f0c85da3" name="Server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6f39e2f9-59be-4366-b9be-9fc801a1b87b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ec6cb888-a534-45e0-b26e-1a9c415b4154" name="Serve the table" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8d973eee-375f-4115-9ef5-b0f1a53238a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="38116200-8b9f-4cb2-8a93-2446168fc619" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2e9cd58c-972f-4607-96c3-b415f913d7c1" name="Serve the table" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="046ce55e-7318-49de-9c8a-e3f5e51e96b5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="8468ddf0-3a1d-4dd5-9ef4-8b3638918b90" name="ASPCore.ModelingProject">
+    <elementDefinition Id="a561e6b5-5e98-43c3-9e90-ea45a6bbb414" />
+  </package>
+</useCaseModelRoot>
