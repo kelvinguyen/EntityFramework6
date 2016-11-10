@@ -14,13 +14,10 @@ namespace MVC4.Web.Controllers
         public ActionResult Index()
         {
             
-            using (var repo = new WebsiteDB())
-            {
-               var  model = repo.Restaurants ;
+          
+               var  model = repo.Restaurants.ToList() ;
                 //var model = _review.OrderBy(r => r.Country);
                 return View(model);
-            }
-               
         }
 
         // GET: Reviews/Details/5
@@ -101,5 +98,6 @@ namespace MVC4.Web.Controllers
         //    new RestaurantReview { Id = 1,Name = "MarshMellow Club",City = "west valley", Country="USA", Rating = 4}
 
         //};
+       
     }
 }
