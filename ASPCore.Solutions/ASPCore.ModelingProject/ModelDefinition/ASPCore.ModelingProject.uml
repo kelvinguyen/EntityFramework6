@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="a561e6b5-5e98-43c3-9e90-ea45a6bbb414"
   name="ASPCore.ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -21,10 +21,162 @@
     <packageHasNamedElement>
       <class
         Id="269c44b3-423b-4146-88f3-cb7b3074f4e5"
-        name="Class1"
+        name="SAPA POS"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b835185b-8745-4a85-8601-60a5aada9968"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="IGeneral"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="89d4f9d2-5f47-46ac-8851-a3d825b1bf80"
+              LastKnownName="IGeneral"
+              LastKnownLocation="ASPCore.ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="132da550-f7c2-4fc6-89d8-d3eec0b3dc62"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0595f298-8a20-4eab-84a2-0cf34712679b"
+                  name="IGeneral"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="27281664-b453-4d8b-a884-63b6458413aa"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="ITicket"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="5c1a29ae-34e0-48f7-930c-41314846a692"
+              LastKnownName="ITicketCenter"
+              LastKnownLocation="ASPCore.ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="65eafd8f-e32e-401b-8867-dc1cb687ddc0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="129ca91d-ff12-4633-8c55-2124f61b872a"
+                  name="ITicket"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="eb7389f5-4730-44e5-8d96-475a4d72bd07"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="IMenu"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="4e25604b-fa10-40e9-a4fe-9fb69f043721"
+              LastKnownName="IMenu"
+              LastKnownLocation="ASPCore.ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6a96ba5e-a48c-46a5-9d4e-0781b9be887c"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b0af7fd0-a4f3-4ae2-9a8f-238f038b802b"
+                  name="IMenu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="ed7c3092-9552-49c8-b5c2-7bb537f6b2d2"
+            name="IGeneral"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="793f911b-97ef-4d2c-b687-12e6d0756637"
+            name="ITicketCenter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9c78949b-955c-4b91-80cd-68df1250e3a2"
+            name="IMenu"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <interaction
@@ -99,6 +251,514 @@
         name="Serve the table"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="89d4f9d2-5f47-46ac-8851-a3d825b1bf80"
+        name="IGeneral"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="9cb080d9-3045-418e-9322-d44fe26f1774"
+            name="GetDiscount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f099f16-3e9a-4d7b-a931-5d252640dfe8"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f51b2182-517e-4e43-9f5c-ca8b7fc2a155"
+                      LastKnownName="IDiscount"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bcc96055-7265-4903-a5c0-7e25fe609f36"
+            name="GetEmployees"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9a46a811-4bf4-44ae-9824-45dcec6e0b65"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dfcceb53-ee2f-4aee-8b15-e22e0cf14172"
+                      LastKnownName="IEmployees"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="60dcd74e-d2a8-4be8-8680-97c789ee6846"
+            name="GetLocation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5f713411-4dd9-4c37-8312-1ebb04275480"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3e1f078a-96dc-49c7-b020-6c1088755e9f"
+                      LastKnownName="ILocation"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="038b4abd-7a75-471b-beb5-06a33b493304"
+            name="GetOrderType"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a952e614-ab97-411c-9273-e15558ab66ad"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e0dcbd19-f822-4bbe-b7d7-50370242bea4"
+                      LastKnownName="IOrderType"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="51630b2d-a3d4-4c13-a58f-8f83e9d029f2"
+            name="GetRevenueCenter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e511871-a499-4568-bafa-9a6e33c267c9"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e50d8308-584b-49d5-b433-7dadaba828bf"
+                      LastKnownName="IRevenueCenter"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bc10a1f2-1489-409a-b01c-c1c0f7f93196"
+            name="GetTables"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1aa34b56-c78e-4542-86df-55632bd95b7d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="23ad3b4e-e4ca-4916-a907-7b8cd1020806"
+                      LastKnownName="ITables"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2f39afdd-9f68-4d76-8919-d2fe7bd3f8ce"
+            name="GetTenderType"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="14ea50c8-3425-4d6b-9e6c-bd60d9e21260"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2fc4f890-d266-42df-8831-88860095755d"
+                      LastKnownName="ITenderType"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="5c1a29ae-34e0-48f7-930c-41314846a692"
+        name="ITicketCenter"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="506c6610-2a62-4b63-a384-b56d09a40ec8"
+            name="GetAllTicketsListFromLocation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fc0286f3-4e81-4e83-a567-68266a705982"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="cd1323d4-2362-4821-a369-e82286eb564b"
+                      LastKnownName="IList&lt;ITicket&gt;"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0ecadb22-6238-4fa0-baf6-d678d08b98ad"
+            name="CreateNewTicket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d40c3894-13a9-43a3-8e7e-896c2f2a97a0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0c6a6d97-18e1-4b05-ac19-be9c1237ed4b"
+                      LastKnownName="void"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9a0aad5d-ba85-4b57-a9e1-b5467ba45b98"
+            name="RetrieveATicket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eadf1c31-9d7b-4caf-ae68-b96f8b843728"
+                  name="int locationId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f327b29-a23b-4caa-a8df-e62efdb4cf1d"
+                  name="int ticketId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="10c1843a-b9aa-4f2b-b274-8b3ca7d95e7f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="505401b1-fe1c-4b4d-a47c-887c0694ab3f"
+                      LastKnownName="ITicket"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1434ade6-483b-46ac-b83e-056f38807b30"
+            name="RemoveATicket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83978075-ffa0-484b-9290-5aa9d8c51a69"
+                  name="int locationId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="561322ac-b456-4eb3-9300-9e09f2488ef8"
+                  name="int ticketId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3690c767-7f5e-42d9-a593-8e48eec222bf"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="74ede512-a807-442d-a5b5-06005b7f8e53"
+                      LastKnownName="bool"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4e25604b-fa10-40e9-a4fe-9fb69f043721"
+        name="IMenu"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="6fced619-1fa3-4879-91e4-2e7dbabb8f98"
+            name="GetCategoryList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d1b6677d-83da-4ea4-b244-d6ac760e1b4e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="815e47d0-5507-44d3-931a-ab891fbcec25"
+                      LastKnownName="List&lt;ICategory&gt;"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fee47ea6-12e8-4b94-a1be-a66bc89b07c8"
+            name="GetAllMenuItemList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc911798-bf52-41fa-b6fe-aea5c0ccc89c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="de919877-8ac1-494c-8519-5749deaa285a"
+                      LastKnownName="List&lt;IItem&gt;"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7118abd8-a426-4f22-b0b4-0ed065602475"
+            name="GetAllModifier"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e0cb784e-6a3c-4008-b07c-18197b7e71b6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ee51119f-6ce6-47ae-89f2-474f153f6977"
+                      LastKnownName="List&lt;IModifier&gt;"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="01aa4118-5547-4130-8dae-f34066458ff4"
+            name="GetAllModifierGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b0edf1a5-cca1-46ad-aecd-6d2383670069"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="2ae01c20-705d-4c00-ba6c-670da7d3fc6a"
+                      LastKnownName="List&lt;IModifierGroup&gt;"
+                      LastKnownLocation="ASPCore.ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f51b2182-517e-4e43-9f5c-ca8b7fc2a155"
+        name="IDiscount" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="dfcceb53-ee2f-4aee-8b15-e22e0cf14172"
+        name="IEmployees" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b6c719c7-2a67-4bf5-aaf7-b58eab616dc6"
+        name="ILocations" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e0dcbd19-f822-4bbe-b7d7-50370242bea4"
+        name="IOrderType" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e50d8308-584b-49d5-b433-7dadaba828bf"
+        name="IRevenueCenter" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="23ad3b4e-e4ca-4916-a907-7b8cd1020806"
+        name="ITables" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3e1f078a-96dc-49c7-b020-6c1088755e9f"
+        name="ILocation" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2fc4f890-d266-42df-8831-88860095755d"
+        name="ITenderType" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0c6a6d97-18e1-4b05-ac19-be9c1237ed4b"
+        name="void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8419e9b8-3efb-45e2-b176-c4f7efb81072"
+        name="IList&lt;ITicket&gt;(" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="cd1323d4-2362-4821-a369-e82286eb564b"
+        name="IList&lt;ITicket&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="505401b1-fe1c-4b4d-a47c-887c0694ab3f"
+        name="ITicket" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="74ede512-a807-442d-a5b5-06005b7f8e53"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c10386d6-ba89-4687-9363-86576ed12c70"
+        name="ICategory" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="815e47d0-5507-44d3-931a-ab891fbcec25"
+        name="List&lt;ICategory&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="de919877-8ac1-494c-8519-5749deaa285a"
+        name="List&lt;IItem&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ee51119f-6ce6-47ae-89f2-474f153f6977"
+        name="List&lt;IModifier&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2ae01c20-705d-4c00-ba6c-670da7d3fc6a"
+        name="List&lt;IModifierGroup&gt;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
