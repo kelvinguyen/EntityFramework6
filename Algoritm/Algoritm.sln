@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListAlgorithm", "Link
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackAlgorithm", "StackAlgorithm\StackAlgorithm.csproj", "{EA19E437-6D96-4D6F-81D6-C01891130DFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomBinaryTree", "CustomBinaryTree\CustomBinaryTree.csproj", "{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EA19E437-6D96-4D6F-81D6-C01891130DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA19E437-6D96-4D6F-81D6-C01891130DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA19E437-6D96-4D6F-81D6-C01891130DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
