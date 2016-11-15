@@ -14,6 +14,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASPCore.Fundamental", "src\
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ASPCore.ModelingProject", "ASPCore.ModelingProject\ASPCore.ModelingProject.modelproj", "{CDF10507-AEEB-49A6-ACD5-E242B200CC59}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASPCore.WebAPI", "src\ASPCore.WebAPI\ASPCore.WebAPI.xproj", "{B9118BA2-FDC7-4098-B2B2-9DFFD032A9EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{CDF10507-AEEB-49A6-ACD5-E242B200CC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDF10507-AEEB-49A6-ACD5-E242B200CC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDF10507-AEEB-49A6-ACD5-E242B200CC59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9118BA2-FDC7-4098-B2B2-9DFFD032A9EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9118BA2-FDC7-4098-B2B2-9DFFD032A9EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9118BA2-FDC7-4098-B2B2-9DFFD032A9EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9118BA2-FDC7-4098-B2B2-9DFFD032A9EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,5 +41,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DF185ECB-4667-4D67-AE37-F8596F2343D3} = {278B5B81-0C5C-45A8-810C-FAFABAAA4C31}
 		{CDF10507-AEEB-49A6-ACD5-E242B200CC59} = {278B5B81-0C5C-45A8-810C-FAFABAAA4C31}
+		{B9118BA2-FDC7-4098-B2B2-9DFFD032A9EB} = {278B5B81-0C5C-45A8-810C-FAFABAAA4C31}
 	EndGlobalSection
 EndGlobal
