@@ -1,0 +1,18 @@
+﻿Metadata WebAPI For Asp.net Core
+
+	- Default Environment Variable : Development , stagging , production
+		+ IHostingEnvironment : object to access environment variable
+
+
+	
+	- Middleware : Use , Run
+
+		+ MVC : - package : 
+								+ Microsoft.AspNetCore.Mvc 
+				- ConfigureServices : 
+								+ AddMvc()
+				- Configure : 
+								+ UseMvc()
+								+ 
+
+

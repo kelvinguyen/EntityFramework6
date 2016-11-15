@@ -23,6 +23,7 @@ namespace ASPCore.WebAPI
          * */
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc(); // intellisense didn't work for this
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,10 +41,13 @@ namespace ASPCore.WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            app.UseMvc();
+
+            
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World!");
+            //});
         }
     }
 }
