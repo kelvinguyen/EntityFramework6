@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackAlgorithm", "StackAlgo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomBinaryTree", "CustomBinaryTree\CustomBinaryTree.csproj", "{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmPracticeExample", "AlgorithmPracticeExample\AlgorithmPracticeExample.csproj", "{28F032C6-35B9-4C4E-B6B1-91267532A0EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0622E78-15CC-4F7A-8322-BFDDB41B6E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F032C6-35B9-4C4E-B6B1-91267532A0EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F032C6-35B9-4C4E-B6B1-91267532A0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F032C6-35B9-4C4E-B6B1-91267532A0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F032C6-35B9-4C4E-B6B1-91267532A0EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
