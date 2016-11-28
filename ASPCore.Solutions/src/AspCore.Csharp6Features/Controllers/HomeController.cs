@@ -29,5 +29,11 @@ namespace AspCore.Csharp6Features.Controllers
             //return View(new string[] { "C#", "Language","Feature"});
             return View(results);
         }
+
+        public ViewResult Index2()
+        {
+            RazorProduct kayak = new RazorProduct { ProductID = 1,Name="kayak",Description="This is the kayak product",Price=2.2M,Category="water sport"};
+            return View(kayak);
+        }
     }
 }
