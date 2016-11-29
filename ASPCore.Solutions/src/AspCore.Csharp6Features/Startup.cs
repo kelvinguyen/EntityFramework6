@@ -29,6 +29,7 @@ namespace AspCore.Csharp6Features
                 app.UseDeveloperExceptionPage();
             }
             app.UseMvcWithDefaultRoute();
+            app.UseBrowserLink();
 
             app.Run(async (context) =>
             {

@@ -35,5 +35,7 @@ namespace AspCore.Csharp6Features.Controllers
             RazorProduct kayak = new RazorProduct { ProductID = 1,Name="kayak",Description="This is the kayak product",Price=2.2M,Category="water sport"};
             return View(kayak);
         }
+
+        public IActionResult Index3() => View(SimpleRepository.SharedRpository.Products);
     }
 }
