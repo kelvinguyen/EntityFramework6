@@ -16,3 +16,39 @@ status code
 
 
 
+-----------------------
+Header
+Content-Type : application/json
+
+
+-------------------
+fluent validation
+https://github.com/JeremySkinner/FluentValidation
+
+------------------
+Partially Update -
+	- Json Patch(RFC 6902) : Describe a document structure for expressing a sequence of operations to apply to a json document
+	- https://tools.ietf.org/html/rfc6902
+	- operation example
+	[
+	 { "op": "test", "path": "/a/b/c", "value": "foo" },
+	 { "op": "remove", "path": "/a/b/c" },
+	 { "op": "add", "path": "/a/b/c", "value": [ "foo", "bar" ] },
+	 { "op": "replace", "path": "/a/b/c", "value": 42 },
+	 { "op": "move", "from": "/a/b/c", "path": "/a/b/d" },
+	 { "op": "copy", "from": "/a/b/d", "path": "/a/b/e" }
+   ]
+
+	- example patch body:
+	[
+		{
+			"op":"replace",
+			"path":"/name",
+			"value":"Update - Lousiana"
+		},
+		{
+			"op":"replace",
+			"path":"/description",
+			"value":"Update - my update description"
+		}
+	]
