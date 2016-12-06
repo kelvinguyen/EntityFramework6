@@ -12,6 +12,8 @@ using Newtonsoft.Json.Serialization;
 using NLog.Extensions.Logging;
 using ASPCore.CityApi.Services;
 using Microsoft.Extensions.Configuration;
+using ASPCore.CityApi.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASPCore.CityApi
 {
@@ -48,6 +50,11 @@ namespace ASPCore.CityApi
 #else
             services.AddTransient<IMailService,CloudMailService>();
 #endif
+            // EF way 2 : using Contructor
+            var connectionstring = @"Server=(localdb)\MSSQLLocalDB;Database=CityInfoDB;Trusted_Connection=True;";
+            services.AddDbContext<CityInfoContext>(o => o.UseSqlServer(connectionstring));
+            // EF way 1
+            //services.AddDbContext<CityInfoContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

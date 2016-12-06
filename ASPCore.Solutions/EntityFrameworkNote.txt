@@ -76,3 +76,28 @@ Configuration File
 										 Microsoft.Extensions.Configuration.Json
 							 + Build the ConfigurationBuilder and set it to IConfigurationRoot
 
+
+---------------------------------------------------------
+Entity Framework Core
+- Annotation 
+	+ primary key : [Key]
+	+ AutoGenerate Primary Key : [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+	+ Avoid Null : [Required]
+	+ foreign Key : [ForeignKey("cityId")]
+
+- Package
+	+ Microsoft.EntityFrameworkCore.SqlServer
+
+- DbContext 
+	+ 1 way :override OnConfiguring() 
+	+ 2 way : using constructor
+
+- StartUp
+	+ ConfigureServices : - services.AddDbContext<>();
+
+- ConnectionString
+	"Server=(localdb)\\MSSQLLocalDB;Database=_CHANGE_ME;Trusted_Connection=True;MultipleActiveResultSets=true"
+		+ Server=(localdb)\\MSSQLLocalDB : in memory database
+		+ Database= CityInfoDB : DataBase Name
+		+ Trusted_Connection=True : this connect is trusted wit window authentication
+
