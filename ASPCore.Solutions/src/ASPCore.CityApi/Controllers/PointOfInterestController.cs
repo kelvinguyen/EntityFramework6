@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ASPCore.CityApi.Models;
 using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.Extensions.Logging;
+using ASPCore.CityApi.Services;
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ASPCore.CityApi.Controllers
@@ -12,13 +14,36 @@ namespace ASPCore.CityApi.Controllers
     [Route("api/cities")]
     public class PointOfInterestController : Controller
     {
+        private ILogger<PointOfInterestController> _logger;
+        private IMailService _mailService;
+
+        public PointOfInterestController(ILogger<PointOfInterestController> logger,
+                                         IMailService mailService)
+        {
+            _logger = logger;
+            _mailService = mailService;
+            //HttpContext.RequestServices.GetService(ILogger<PointOfInterestController>); --> use this to request service from container
+        }
+
         [HttpGet("{cityId}/PointsOfInterest")]
        public IActionResult GetPointsOfInterest(int cityId)
        {
-            var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
-            if (city == null)
-                return NotFound();
-            return Ok(city.PointsOfInterest);
+            try
+            {
+                var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
+                if (city == null)
+                {
+                    _logger.LogInformation($"City with id {cityId} wasn't found when accessing points of Interest");
+                    return NotFound();
+                }
+
+                return Ok(city.PointsOfInterest);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogCritical($"Exception while getting points of interest for city with id {cityId}",ex);
+                return StatusCode(500, "A problem happened while handling your request.");
+            }
        }
 
         [HttpGet("{cityId}/PointsOfInterest/{id}",Name ="GetPointOfInterest")]
@@ -152,6 +177,8 @@ namespace ASPCore.CityApi.Controllers
             if (poicity == null)
                 return BadRequest();
             poi.Remove(poicity);
+
+            _mailService.Send("Point of Interest deleted", $"Point of Interest {poicity.Name} with id {poicity.Id} was deleted");
             return NoContent();
         }
     }

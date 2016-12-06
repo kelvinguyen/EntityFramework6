@@ -52,3 +52,27 @@ Partially Update -
 			"value":"Update - my update description"
 		}
 	]
+
+----------------------------------------------------------------
+Logging Provider
+
+- https://github.com/aspnet/Logging
+- NLog : third party
+	+ http://nlog-project.org/
+
+-----------------------------------------------------------
+Add Service to container in StartUp.cs
+- AddTransient : add service each time request (best : light weight stateless services)
+- AddScoped : create one per request
+- AddSingleton : first time request and use same instance
+
+
+--------------------------------------------------------
+Configuration File
+1> add json file : appsetting.json
+2> add to configureService : + static IConfigurationRoot
+							 + constructor : ConfigurationBuilder
+							 + package : Microsoft.Extensions.Configuration.FileExtensions , 
+										 Microsoft.Extensions.Configuration.Json
+							 + Build the ConfigurationBuilder and set it to IConfigurationRoot
+
