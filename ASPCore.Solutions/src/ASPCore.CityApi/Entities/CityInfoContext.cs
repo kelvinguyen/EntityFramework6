@@ -12,7 +12,8 @@ namespace ASPCore.CityApi.Entities
         public CityInfoContext(DbContextOptions<CityInfoContext> options) 
             : base(options)
         {
-            Database.EnsureCreated(); // if database has not create, then create it
+            //Database.EnsureCreated(); // if database has not create, then create database schema at runtime and skip migration
+            Database.Migrate(); // create database and apply on app start
         }
         public DbSet<City> Cities { get; set; }
         public DbSet<PointOfInterest> PointsOfInterest { get; set; }

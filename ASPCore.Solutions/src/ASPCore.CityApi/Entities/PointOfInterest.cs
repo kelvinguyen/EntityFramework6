@@ -10,7 +10,11 @@ namespace ASPCore.CityApi.Entities
         public int Id { get; set; }
 
         [Required] // avoid null input
+        [MaxLength(50)]
         public string Name { get; set; }
+
+        [MaxLength(200)]
+        public string Description { get; set; }
 
         [ForeignKey("CityId")]
         public City City { get; set; } // navigation prop
