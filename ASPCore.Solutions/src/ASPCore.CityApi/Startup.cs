@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using ASPCore.CityApi.Entities;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace ASPCore.CityApi
 {
     public class Startup
@@ -80,6 +81,15 @@ namespace ASPCore.CityApi
             }
             cityInfoContext.EnsureSeedDataForContext();
             app.UseStatusCodePages();
+            AutoMapper.Mapper.Initialize(cfg =>
+            {
+                // By Default, it will ignore null reference exception
+                cfg.CreateMap<Entities.City, Models.CityWithoutPointsOfInterestDto>();
+                cfg.CreateMap<Entities.City, Models.CityDto>();
+                cfg.CreateMap<Entities.PointOfInterest, Models.PointOfInterestDto>();
+                cfg.CreateMap<Models.PointOfInterestForCreationDto, Entities.PointOfInterest>();
+                cfg.CreateMap<Models.PointOfInterestForUpdateDto, Entities.PointOfInterest>();
+            });
             app.UseMvcWithDefaultRoute();
         }
     }

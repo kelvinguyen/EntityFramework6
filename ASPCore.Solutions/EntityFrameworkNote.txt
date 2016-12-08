@@ -128,3 +128,10 @@ Repository
 			+ <Example> : _cityInfoContext.Cities.Include(c => c.PointsOfInterest).FirstOrDefault(c => c.Id == cityId);
 
 - register in ConfigureService in startup class
+
+------------------------------------------------
+AutoMapper
+- package :  "AutoMapper": "5.2.0" // this version is working version
+- StartUp\Configure : AutoMapper.Mapper.Initialize()
+- Controller : AutoMapper.Mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities);
+	+ From Entity to Dto

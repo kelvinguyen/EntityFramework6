@@ -14,6 +14,18 @@ namespace ASPCore.CityApi.Services
         {
             _cityInfoContext = cityInfoContext;
         }
+
+        public void AddPointOfInterestForCity(int cityId, PointOfInterest pointOfInterest)
+        {
+            var city = GetCity(cityId, false); // we don't have to include all pointsOfInterest
+            city.PointsOfInterest.Add(pointOfInterest);
+        }
+
+        public bool CityExists(int cityId)
+        {
+            return _cityInfoContext.Cities.Any(c => c.Id == cityId);
+        }
+
         public IEnumerable<City> GetCities()
         {
             return _cityInfoContext.Cities.OrderBy(c => c.Name).ToList();
@@ -35,7 +47,12 @@ namespace ASPCore.CityApi.Services
 
         public IEnumerable<PointOfInterest> GetPointsOfInterestForCity(int cityId)
         {
-            return _cityInfoContext.PointsOfInterest.ToList();
+            return _cityInfoContext.PointsOfInterest.Where(c => c.CityId == cityId).ToList();
+        }
+
+        public bool Save()
+        {
+            return (_cityInfoContext.SaveChanges() >= 0); // if 0 or more entity has been change
         }
     }
 }
