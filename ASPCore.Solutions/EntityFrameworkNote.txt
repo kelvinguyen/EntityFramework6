@@ -62,7 +62,7 @@ Logging Provider
 
 -----------------------------------------------------------
 Add Service to container in StartUp.cs
-- AddTransient : add service each time request (best : light weight stateless services)
+- AddTransient : create service each time when they request (best : light weight stateless services)
 - AddScoped : create one per request
 - AddSingleton : first time request and use same instance
 
@@ -113,3 +113,18 @@ Entity Framework Core
 	+ CityInfoContextExtensions class
 	+ Configure in startup class
 
+-------------------------------------------------------------
+Repository
+- Create interface Repository
+	+ only create method that need, add more when needed
+- Create Repository implement interface
+
+- Coding Repository Note
+	+ IQuerable vs IEnumerable
+		- IQuerable : give more capability to query data but expose data out of the persistent data
+		- IEnumerable : less capability but data persist
+	+ Linq note
+		- Include : belong in Microsoft.EntityFrameworkCore namespace
+			+ <Example> : _cityInfoContext.Cities.Include(c => c.PointsOfInterest).FirstOrDefault(c => c.Id == cityId);
+
+- register in ConfigureService in startup class

@@ -55,6 +55,9 @@ namespace ASPCore.CityApi
             services.AddDbContext<CityInfoContext>(o => o.UseSqlServer(connectionstring));
             // EF way 1
             //services.AddDbContext<CityInfoContext>();
+
+            //register repository
+            services.AddScoped<ICityInfoRepository, CityInfoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
