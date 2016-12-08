@@ -109,3 +109,7 @@ Entity Framework Core
 	+ Add-Migration CityInfoDBInitialMigration 
 	+ Update-Database
 
+- Seeding Data
+	+ CityInfoContextExtensions class
+	+ Configure in startup class
+
