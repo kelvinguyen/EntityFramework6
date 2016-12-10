@@ -26,6 +26,11 @@ namespace ASPCore.CityApi.Services
             return _cityInfoContext.Cities.Any(c => c.Id == cityId);
         }
 
+        public void DeletePointOfInterest(PointOfInterest pointOfInterest)
+        {
+            _cityInfoContext.PointsOfInterest.Remove(pointOfInterest);
+        }
+
         public IEnumerable<City> GetCities()
         {
             return _cityInfoContext.Cities.OrderBy(c => c.Name).ToList();

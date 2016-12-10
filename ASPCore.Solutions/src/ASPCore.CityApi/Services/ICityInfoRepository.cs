@@ -16,5 +16,6 @@ namespace ASPCore.CityApi.Services
         void AddPointOfInterestForCity(int cityId, PointOfInterest pointOfInterest);
 
         bool Save();
+        void DeletePointOfInterest(PointOfInterest pointOfInterest);
     }
 }

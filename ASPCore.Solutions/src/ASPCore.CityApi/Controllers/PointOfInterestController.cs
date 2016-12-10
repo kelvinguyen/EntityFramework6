@@ -141,6 +141,30 @@ namespace ASPCore.CityApi.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            if (!_cityInfoRepo.CityExists(cityId))
+                return NotFound();
+
+            var pointOfInterestFromStore = _cityInfoRepo.GetPointOfInterestForCity(cityId,id);
+
+            if (pointOfInterestFromStore == null)
+                return NotFound();
+
+            AutoMapper.Mapper.Map(pointOfInterest, pointOfInterestFromStore);
+            if (!_cityInfoRepo.Save())
+                return StatusCode(500, "There is something in your request");
+
+            return NoContent();
+            #region Without EF
+            /*
+            if (pointOfInterest == null)
+                return BadRequest();
+
+            if (pointOfInterest.Name == pointOfInterest.Description)
+                ModelState.AddModelError("Description", "Description should be different with Name");
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
             if (city == null)
                 return NotFound();
@@ -154,6 +178,8 @@ namespace ASPCore.CityApi.Controllers
             pointOfInterestFromStore.Description = pointOfInterest.Description; 
 
             return NoContent();
+            */
+            #endregion
         }
 
         //partial update
@@ -164,22 +190,16 @@ namespace ASPCore.CityApi.Controllers
             if (patchDoc == null)
                 return BadRequest();
 
-            var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
-            if (city == null)
+            if (!_cityInfoRepo.CityExists(cityId))
                 return NotFound();
 
-            var pointOfInterestFromStore = city.PointsOfInterest.FirstOrDefault(c => c.Id == id);
+            var pointOfInterestFromStore = _cityInfoRepo.GetPointOfInterestForCity(cityId,id);
 
             if (pointOfInterestFromStore == null)
                 return NotFound();
 
-            
-            var pointOfInterestToPatch = new PointOfInterestForUpdateDto()
-            {
-                Name = pointOfInterestFromStore.Name,
-                Description = pointOfInterestFromStore.Description
-            };
-
+            var pointOfInterestToPatch = AutoMapper.Mapper.Map<PointOfInterestForUpdateDto>(pointOfInterestFromStore);
+          
             // updating section , add ModelState to check if we add some properties from body doesn't exist in our model
             // apply patch document to pointOfInterestToPatch
             patchDoc.ApplyTo(pointOfInterestToPatch, ModelState);
@@ -193,18 +213,76 @@ namespace ASPCore.CityApi.Controllers
             TryValidateModel(pointOfInterestToPatch);
             if (!ModelState.IsValid) // this is the ModelState PointOfInterestUpdateDto
                 return BadRequest(ModelState);
-            
-            pointOfInterestFromStore.Name = pointOfInterestToPatch.Name;
-            pointOfInterestFromStore.Description = pointOfInterestToPatch.Description;
 
+            // AutoMapper.Mapper.Map(source,destination);
+            AutoMapper.Mapper.Map(pointOfInterestToPatch,pointOfInterestFromStore);
+            if (!_cityInfoRepo.Save())
+                return StatusCode(500, "A problem while handling request");
 
             return NoContent();
+            #region PartialUpdate without EF
+            /*
+                        if (patchDoc == null)
+                            return BadRequest();
+
+                        var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
+                        if (city == null)
+                            return NotFound();
+
+                        var pointOfInterestFromStore = city.PointsOfInterest.FirstOrDefault(c => c.Id == id);
+
+                        if (pointOfInterestFromStore == null)
+                            return NotFound();
+
+
+                        var pointOfInterestToPatch = new PointOfInterestForUpdateDto()
+                        {
+                            Name = pointOfInterestFromStore.Name,
+                            Description = pointOfInterestFromStore.Description
+                        };
+
+                        // updating section , add ModelState to check if we add some properties from body doesn't exist in our model
+                        // apply patch document to pointOfInterestToPatch
+                        patchDoc.ApplyTo(pointOfInterestToPatch, ModelState);
+
+                        if (!ModelState.IsValid) // this is the ModelState for JsonPatchDocumet not PointOfInterestUpdateDto
+                            return BadRequest(ModelState);
+                        // validate the PointOfInterestForUpdateDto
+                        if (pointOfInterestToPatch.Name == pointOfInterestToPatch.Description)
+                            ModelState.AddModelError("Description", "Description should be different with Name");
+
+                        TryValidateModel(pointOfInterestToPatch);
+                        if (!ModelState.IsValid) // this is the ModelState PointOfInterestUpdateDto
+                            return BadRequest(ModelState);
+
+                        pointOfInterestFromStore.Name = pointOfInterestToPatch.Name;
+                        pointOfInterestFromStore.Description = pointOfInterestToPatch.Description;
+
+
+                        return NoContent();
+            */
+            #endregion
         }
 
         //delete resource
         [HttpDelete("{cityId}/PointsOfInterest/{id}")]
         public IActionResult DeletePointOfInterest(int cityId, int id)
         {
+            if (!_cityInfoRepo.CityExists(cityId))
+                return BadRequest();
+           
+            var poi = _cityInfoRepo.GetPointOfInterestForCity(cityId,id);
+            if (poi == null)
+                return BadRequest();
+
+            _cityInfoRepo.DeletePointOfInterest(poi);
+            if (!_cityInfoRepo.Save())
+                return StatusCode(500, "Request Error");
+
+            _mailService.Send("Point of Interest deleted", $"Point of Interest {poi.Name} with id {poi.Id} was deleted");
+            return NoContent();
+            #region without EF
+            /*
             var cities = CitiesDataStore.Current.Cities;
             if (cities == null)
                 return BadRequest();
@@ -221,6 +299,8 @@ namespace ASPCore.CityApi.Controllers
 
             _mailService.Send("Point of Interest deleted", $"Point of Interest {poicity.Name} with id {poicity.Id} was deleted");
             return NoContent();
+            */
+            #endregion
         }
     }
 }
