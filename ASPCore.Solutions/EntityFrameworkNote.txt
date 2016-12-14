@@ -62,6 +62,7 @@ Logging Provider
 
 -----------------------------------------------------------
 Add Service to container in StartUp.cs
+- AddTransient : create service each time when they request (best : light weight stateless services)
 - AddTransient : add service each time request (best : light weight stateless services)
 - AddScoped : create one per request
 - AddSingleton : first time request and use same instance
@@ -109,20 +110,29 @@ Entity Framework Core
 	+ Add-Migration CityInfoDBInitialMigration 
 	+ Update-Database
 
--------------------------------------------------------------------------------------
-Generic Note
+- Seeding Data
+	+ CityInfoContextExtensions class
+	+ Configure in startup class
 
-where T: struct				|	The type argument must be a value type. 
-								Any value type except Nullable can be specified. See Using Nullable Types for more information.
+-------------------------------------------------------------
+Repository
+- Create interface Repository
+	+ only create method that need, add more when needed
+- Create Repository implement interface
 
-where T : class				|	The type argument must be a reference type; this applies also to any class, interface, delegate, or array type.
+- Coding Repository Note
+	+ IQuerable vs IEnumerable
+		- IQuerable : give more capability to query data but expose data out of the persistent data
+		- IEnumerable : less capability but data persist
+	+ Linq note
+		- Include : belong in Microsoft.EntityFrameworkCore namespace
+			+ <Example> : _cityInfoContext.Cities.Include(c => c.PointsOfInterest).FirstOrDefault(c => c.Id == cityId);
 
-where T : new()				|	The type argument must have a public parameterless constructor. 
-								When used together with other constraints, the new() constraint must be specified last.
+- register in ConfigureService in startup class
 
-where T : <base class name>	|	The type argument must be or derive from the specified base class.
-
-where T : <interface name>	|	The type argument must be or implement the specified interface. Multiple interface constraints can be specified. 
-								The constraining interface can also be generic.
-
-where T : U					|	The type argument supplied for T must be or derive from the argument supplied for U.
+------------------------------------------------
+AutoMapper
+- package :  "AutoMapper": "5.2.0" // this version is working version
+- StartUp\Configure : AutoMapper.Mapper.Initialize()
+- Controller : AutoMapper.Mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities);
+	+ From Entity to Dto

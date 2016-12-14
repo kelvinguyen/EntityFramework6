@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using ASPCore.CityApi.Entities;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace ASPCore.CityApi
 {
     public class Startup
@@ -55,10 +56,13 @@ namespace ASPCore.CityApi
             services.AddDbContext<CityInfoContext>(o => o.UseSqlServer(connectionstring));
             // EF way 1
             //services.AddDbContext<CityInfoContext>();
+
+            //register repository
+            services.AddScoped<ICityInfoRepository, CityInfoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory,CityInfoContext cityInfoContext)
         {
             loggerFactory.AddConsole();
             loggerFactory.AddDebug();
@@ -75,7 +79,19 @@ namespace ASPCore.CityApi
             {
                 app.UseExceptionHandler();
             }
+            cityInfoContext.EnsureSeedDataForContext();
             app.UseStatusCodePages();
+            AutoMapper.Mapper.Initialize(cfg =>
+            {
+                // By Default, it will ignore null reference exception
+                // cfg.CreateMap<From, To>();
+                cfg.CreateMap<Entities.City, Models.CityWithoutPointsOfInterestDto>();
+                cfg.CreateMap<Entities.City, Models.CityDto>();
+                cfg.CreateMap<Entities.PointOfInterest, Models.PointOfInterestDto>();
+                cfg.CreateMap<Models.PointOfInterestForCreationDto, Entities.PointOfInterest>();
+                cfg.CreateMap<Models.PointOfInterestForUpdateDto, Entities.PointOfInterest>();
+                cfg.CreateMap<Entities.PointOfInterest, Models.PointOfInterestForUpdateDto>();
+            });
             app.UseMvcWithDefaultRoute();
         }
     }
